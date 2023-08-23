@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word Combination App</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 添加下面的样式规则 */
+        div pre {
+            font-size: 23px; /* 调整为您希望的字体大小 */
+            font-family: "黑体", sans-serif; /* 使用黑体字体样式 */
+        }
+    </style>
+</head>
+<body>
+    <h1>生成机娘错误日志</h1>
+    <form action="/generate" method="post">
+        <label for="input_text">输入词语，并以空格分隔：</label>
+        <input type="text" id="input_text" name="input_text" required><br>
+        <label for="input_text">输入完了记得复制一份！不然按下生成后就会消失的</label>
+        <label for="input_text">这个bug我不会改...TAT</label>
+        <input type="submit" value="生成">
+    </form>
+    <br>
+    {% if result %}
+    <div>
+        <h2>结果：</h2>
+        <pre>{{ result }}</pre>
+    </div>
+    {% endif %}
+</body>
+</html>
